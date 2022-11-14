@@ -23,7 +23,7 @@ def index():
        <form action = "http://localhost:5000/login" method = "post">
           <p>Enter category :</p>
           <p><input type = "text" name = "cat" /></p>
-          <p><input type = "submit" value = "Download CSV" /></p> 
+          <p><input type = "submit" value = "Generate CSV" /></p> 
        </form>     
     </body>
  </html>"""
