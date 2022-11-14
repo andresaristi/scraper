@@ -40,7 +40,7 @@ def login():
 @app.route('/succes/<c>')
 def success(c):
     val = c
-    response = Response('Hello %s!' % c)
+    response = Response('The CSV file has been generated for category %s!' % c)
 
     @response.call_on_close
     def data():
