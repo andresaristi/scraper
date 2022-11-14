@@ -126,12 +126,6 @@ def success(c):
 
     return response
 
-def data(c):
-  firefox_options = Options()
-  firefox_options.add_argument("--headless")
-  driver = webdriver.Chrome(service=Service('/usr/local/bin/geckodriver'),
-                          options=firefox_options)
-
 # Declaring the lists where the info about the courses will be stored
   course_name = []
   course_provider = []
