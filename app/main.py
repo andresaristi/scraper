@@ -126,7 +126,7 @@ def success(c):
                     text = ""
                     paragraphs= elements[0].find_elements(By.CSS_SELECTOR, 'p')
                     for paragraph in paragraphs:
-                        if len(paragraph.text) > 200:
+                        if len(paragraph.text) > 150:
                             text += "\n\n"+paragraph.text
                     course_description.append(text.strip("\n"))
                 driver1.close()
@@ -138,7 +138,7 @@ def success(c):
         courses_by_search.columns = ["Name","Provider","Description","# enrolled","# ratings"]
         # We print the dataframe to console
         print(courses_by_search)
-        # Authenticating to github
+        # Authenticating to github (must change token for real one)
         g = Github(token)
         repository = g.get_user().get_repo('files')
         filename = 'files/coursera_'+c+'.csv'
